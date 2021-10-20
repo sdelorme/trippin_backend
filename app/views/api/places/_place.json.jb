@@ -1,0 +1,10 @@
+{
+  place_id: place["place_id"],
+  name: place["name"],
+  # geometry: place["geometry"],
+  lat: place["geometry"]["location"]["lat"],
+  lng: place["geometry"]["location"]["lng"],
+  rating: place["rating"],
+  user_ratings_total: place["user_ratings_total"],
+  address: place["vicinity"],
+}

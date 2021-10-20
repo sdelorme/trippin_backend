@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
-    get "/nearby_search" => "places#nearby_search"
+    get "/places/nearby_search" => "places#nearby_search"
+    get "/places/place_details" => "places#place_details"
   end
 end

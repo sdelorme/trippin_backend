@@ -1,0 +1,12 @@
+  {
+    name: @place["result"]["name"],
+    address: @place["result"]["formatted_address"],
+    phone_number: @place["result"]["formatted_phone_number"],
+    hours: @place["result"]["opening_hours"]["weekday_text"],
+    rating: @place["result"]["rating"],
+    user_ratings_total: @place["result"]["user_ratings_total"],
+    website: @place["result"]["website"],
+    google_url: @place["result"]["url"],
+    lat: @place["result"]["geometry"]["location"]["lat"],
+    lng: @place["result"]["geometry"]["location"]["lng"],
+  }

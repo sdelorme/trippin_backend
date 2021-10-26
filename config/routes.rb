@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/places/nearby_search" => "places#nearby_search"
     get "/places/place_details" => "places#place_details"
-    get "/places/address" => "places#address_to_lat_lng"
+    # get "/places/address" => "places#address_to_lat_lng"
   end
 end

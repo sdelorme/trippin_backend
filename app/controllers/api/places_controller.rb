@@ -1,6 +1,12 @@
 class Api::PlacesController < ApplicationController
   def nearby_search
-    response = HTTP.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=#{params[:keyword]}&location=#{params[:lat]},#{params[:lng]}&rankby=distance&type=#{params[:type]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
+    address = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params[:address]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
+
+    @location = address.parse
+    @lat = @location["results"][0]["geometry"]["location"]["lat"]
+    @lng = @location["results"][0]["geometry"]["location"]["lng"]
+    
+    response = HTTP.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=#{params[:keyword]}&location=#{@lat},#{@lng}&rankby=distance&type=#{params[:type]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
     
     @places = response.parse
     # render json: @places
@@ -15,10 +21,13 @@ class Api::PlacesController < ApplicationController
     render 'show.json.jb'
   end
 
-  def address_to_lat_lng
-    response = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
+  # def address_to_lat_lng
+  #   response = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params[:address].to_s}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
 
-    render json: response.parse
-  end
+  #   @location = response.parse
+  #   @lat = @location["results"][0]["geometry"]["location"]["lat"]
+  #   @lng = @location["results"][0]["geometry"]["location"]["lng"]
+  #   # render json: @lng
+  # end
 end
 # need to find a way to pull single photo to display

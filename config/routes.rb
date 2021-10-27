@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get "/places/nearby_search" => "places#nearby_search"
     get "/places/place_details" => "places#place_details"
     # get "/places/address" => "places#address_to_lat_lng"
+    post "/users" => "users#create"
+
   end
 end

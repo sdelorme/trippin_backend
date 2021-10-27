@@ -1,0 +1,2 @@
+class SavedPlacesController < ApplicationController
+end

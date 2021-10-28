@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
     post "/new_event" => "trip_events#create"
     post "/sessions" => "sessions#create"
+    post "/new_trip" => "trips#create"
   end
 end

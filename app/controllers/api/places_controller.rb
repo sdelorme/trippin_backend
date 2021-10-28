@@ -20,14 +20,5 @@ class Api::PlacesController < ApplicationController
     # render json: @place
     render 'show.json.jb'
   end
-
-  # def address_to_lat_lng
-  #   response = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params[:address].to_s}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
-
-  #   @location = response.parse
-  #   @lat = @location["results"][0]["geometry"]["location"]["lat"]
-  #   @lng = @location["results"][0]["geometry"]["location"]["lng"]
-  #   # render json: @lng
-  # end
 end
 # need to find a way to pull single photo to display

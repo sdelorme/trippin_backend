@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     # get "/places/address" => "places#address_to_lat_lng"
     post "/users" => "users#create"
     post "/new_event" => "trip_events#create"
-
+    post "/sessions" => "sessions#create"
   end
 end

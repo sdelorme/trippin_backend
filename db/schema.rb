@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_27_231936) do
+ActiveRecord::Schema.define(version: 2021_10_28_011303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "saved_places", force: :cascade do |t|
+  create_table "trip_events", force: :cascade do |t|
     t.string "place_id"
     t.string "name"
     t.string "address"

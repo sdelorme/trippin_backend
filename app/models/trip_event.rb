@@ -1,0 +1,2 @@
+class TripEvent < ApplicationRecord
+end

@@ -1,8 +1,9 @@
 class Api::PlacesController < ApplicationController
   def nearby_search
-    address = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params[:address]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
+    address = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?&key=#{Rails.application.credentials.google_maps_api[:api_key]}", :params => {:address => params[:address]})
 
     @location = address.parse
+    # render json: @location
     @lat = @location["results"][0]["geometry"]["location"]["lat"]
     @lng = @location["results"][0]["geometry"]["location"]["lng"]
     

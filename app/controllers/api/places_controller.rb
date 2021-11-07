@@ -10,9 +10,17 @@ class Api::PlacesController < ApplicationController
     response = HTTP.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=#{params[:keyword]}&location=#{@lat},#{@lng}&rankby=distance&type=#{params[:type]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
     
     @places = response.parse
-    next_page_token = @places["next_page_token"]
-    render json: next_page_token
-    # render 'index.json.jb'
+    @next_page_token = @places["next_page_token"]
+    # render json: next_page_token
+    render 'index.json.jb'
+  end
+
+  def next_page
+    next_page = HTTP.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=#{params[:next_page_token]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
+
+    @places = next_page.parse
+
+    render 'index.json.jb'
   end
 
   def place_details

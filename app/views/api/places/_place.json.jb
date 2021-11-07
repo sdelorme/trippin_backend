@@ -7,4 +7,5 @@
   rating: place["rating"],
   user_ratings_total: place["user_ratings_total"],
   address: place["vicinity"],
+  next_page_token: @next_page_token
 }

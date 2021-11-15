@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     get "/places/place_details" => "places#place_photo"
     # get "/places/address" => "places#address_to_lat_lng"
     post "/users" => "users#create"
+    post "/sessions" => "sessions#create"
     post "/new_event" => "trip_events#create"
     get "/trip_events" => "trip_events#index"
     get "/trip_events/:id" => "trip_events#show"
-    post "/sessions" => "sessions#create"
     post "/new_trip" => "trips#create"
   end
 end

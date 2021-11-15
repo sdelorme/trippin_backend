@@ -12,6 +12,7 @@ class Api::TripEventsController < ApplicationController
       google_url: params[:google_url],
       lat: params[:lat],
       lng: params[:lng],
+      photo_reference: params[:photo_reference],
     )
     if @event.save
       render json: { message: "Event added successfully" }, status: :created

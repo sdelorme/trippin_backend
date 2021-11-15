@@ -19,4 +19,13 @@ class Api::TripEventsController < ApplicationController
       render json: { errors: @event.errors.full_messages }, status: :bad_request
     end
   end
+
+  def index
+    @events = current_user.trip_events
+    render 'index.json.jb'
+  end
+  def show
+    @event = TripEvent.find(params[:id])
+    render 'show.json.jb'
+  end
 end

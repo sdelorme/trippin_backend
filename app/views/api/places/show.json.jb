@@ -9,5 +9,4 @@
     google_url: @place["result"]["url"],
     lat: @place["result"]["geometry"]["location"]["lat"],
     lng: @place["result"]["geometry"]["location"]["lng"],
-    photo: @photo
   }

@@ -1,0 +1,13 @@
+{
+  place_id: trip_event.place_id,
+  name: trip_event.name,
+  address: trip_event.address,
+  phone_number: trip_event.phone_number,
+  hours: trip_event.hours,
+  rating: trip_event.rating,
+  user_ratings_total: trip_event.user_ratings_total,
+  website: trip_event.website,
+  google_url: trip_event.google_url,
+  lat: trip_event.lat,
+  lng: trip_event.lng,
+}

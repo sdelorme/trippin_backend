@@ -43,4 +43,3 @@ class Api::PlacesController < ApplicationController
     render json: @photo
   end
 end
-# need to find a way to pull single photo to display

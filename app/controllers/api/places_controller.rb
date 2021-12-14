@@ -29,11 +29,6 @@ class Api::PlacesController < ApplicationController
 
     @place = response.parse
 
-    # @photo = HTTP.get("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{params[:photo_reference]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
-
-    # @photo = photo.parse
-    
-    # render json: @place
     render 'show.json.jb'
   end
 

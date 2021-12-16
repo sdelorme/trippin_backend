@@ -27,7 +27,9 @@ class Api::PlacesController < ApplicationController
   def place_details
     response = HTTP.get("https://maps.googleapis.com/maps/api/place/details/json?fields=name,formatted_address,geometry,photo,type,formatted_phone_number,opening_hours,website,rating,price_level,url,user_ratings_total&place_id=#{params[:place_id]}&key=#{Rails.application.credentials.google_maps_api[:api_key]}")
 
-    @place = response.parse
+    place = response.parse
+    @place = place["result"]
+    # if no place render not found else render show
 
     render 'show.json.jb'
   end

@@ -9,4 +9,5 @@
     google_url: @place.dig("url"),
     lat: @place.dig("geometry","location","lat"),
     lng: @place.dig("geometry","location","lng"),
+    photos: @place.dig("photos")
   }

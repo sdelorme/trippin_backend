@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     post "/trip_events/new" => "trip_events#create"
     get "/trip_events" => "trip_events#index"
     get "/trip_events/:id" => "trip_events#show"
-    post "/trips/new" => "trips#create"
+    # post "/trips/new" => "trips#create"
   end
 end

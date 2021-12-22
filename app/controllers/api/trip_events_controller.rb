@@ -1,4 +1,10 @@
 class Api::TripEventsController < ApplicationController
+  before_action :authenticate_user
+  def index
+    @events = current_user.trip_events
+    render 'index.json.jb'
+  end
+  
   def create
     @event = TripEvent.new(
       place_id: params[:place_id],
@@ -19,12 +25,13 @@ class Api::TripEventsController < ApplicationController
     else
       render json: { errors: @event.errors.full_messages }, status: :bad_request
     end
+    @trip = Trip.new(
+      user_id: params[:user_id].to_i,
+      trip_event_id: @event[:id],
+    )
+    @trip.save
   end
 
-  def index
-    @events = current_user.trip_events
-    render 'index.json.jb'
-  end
   def show
     @event = TripEvent.find(params[:id])
     render 'show.json.jb'

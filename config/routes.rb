@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     # get "/places/address" => "places#address_to_lat_lng"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
-    post "/new_event" => "trip_events#create"
+    post "/trip_events/new" => "trip_events#create"
     get "/trip_events" => "trip_events#index"
     get "/trip_events/:id" => "trip_events#show"
-    post "/new_trip" => "trips#create"
+    post "/trips/new" => "trips#create"
   end
 end

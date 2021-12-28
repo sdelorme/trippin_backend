@@ -28,6 +28,9 @@ class Api::TripEventsController < ApplicationController
     @trip = Trip.new(
       user_id: params[:user_id].to_i,
       trip_event_id: @event[:id],
+      name: @event[:name],
+      start: params[:start].strftime("%y-%m-%e %H:%M"),
+      end: params[:start].strftime("%y-%m-%e %H:%M")
     )
     @trip.save
   end

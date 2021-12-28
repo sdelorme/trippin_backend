@@ -19,6 +19,8 @@ class Api::TripEventsController < ApplicationController
       lat: params[:lat],
       lng: params[:lng],
       photo_reference: params[:photo_reference],
+      start: params[:start].strftime("%y-%m-%e %H:%M"),
+      end: params[:end].strftime("%y-%m-%e %H:%M")
     )
     if @event.save
       render json: { message: "Event added successfully" }, status: :created
@@ -28,9 +30,6 @@ class Api::TripEventsController < ApplicationController
     @trip = Trip.new(
       user_id: params[:user_id].to_i,
       trip_event_id: @event[:id],
-      name: @event[:name],
-      start: params[:start].strftime("%y-%m-%e %H:%M"),
-      end: params[:start].strftime("%y-%m-%e %H:%M")
     )
     @trip.save
   end

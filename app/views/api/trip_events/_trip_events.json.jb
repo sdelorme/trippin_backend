@@ -10,4 +10,6 @@
   google_url: trip_event.google_url,
   lat: trip_event.lat,
   lng: trip_event.lng,
+  start: trip_event.start,
+  end: trip_event.end
 }

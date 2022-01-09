@@ -19,8 +19,9 @@ class Api::TripEventsController < ApplicationController
       lat: params[:lat],
       lng: params[:lng],
       photo_reference: params[:photo_reference],
-      start: params[:start].strftime("%y-%m-%e %H:%M"),
-      end: params[:end].strftime("%y-%m-%e %H:%M")
+      start: params[:start]&.strftime("%y-%m-%e %H:%M"),
+      end: params[:end]&.strftime("%y-%m-%e %H:%M")
+      # & operator allows start and end time to pass when nil
     )
     if @event.save
       render json: { message: "Event added successfully" }, status: :created

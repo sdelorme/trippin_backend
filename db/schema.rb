@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_28_203925) do
+ActiveRecord::Schema.define(version: 2022_01_23_213456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2021_12_28_203925) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "photo_reference"
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
   end
 
   create_table "trips", force: :cascade do |t|

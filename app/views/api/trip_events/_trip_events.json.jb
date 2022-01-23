@@ -13,3 +13,4 @@
   start: trip_event.start,
   end: trip_event.end
 }
+# .to_datetime.strftime("%Y-%m-%e %H:%M")

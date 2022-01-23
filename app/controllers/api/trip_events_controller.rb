@@ -19,9 +19,9 @@ class Api::TripEventsController < ApplicationController
       lat: params[:lat],
       lng: params[:lng],
       photo_reference: params[:photo_reference],
-      start: params[:start].to_time,
-      end: params[:end].to_time
-      # & operator allows start and end time to pass when nil
+      start: params[:start].to_date,
+      end: params[:end].to_date
+      # & operator allows start and end time to pass when nil, removed that, now need to fix this to display string to time 
     )
     if @event.save
       render json: { message: "Event added successfully" }, status: :created

@@ -19,8 +19,8 @@ class Api::TripEventsController < ApplicationController
       lat: params[:lat],
       lng: params[:lng],
       photo_reference: params[:photo_reference],
-      start: params[:start].to_date,
-      end: params[:end].to_date
+      start: params[:start].to_datetime,
+      end: params[:end].to_datetime
       # & operator allows start and end time to pass when nil, removed that, now need to fix this to display string to time 
     )
     if @event.save

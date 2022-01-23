@@ -10,7 +10,7 @@
   google_url: trip_event.google_url,
   lat: trip_event.lat,
   lng: trip_event.lng,
-  start: trip_event.start,
-  end: trip_event.end
+  start: trip_event.start.try(:strftime,("%Y-%m-%e %H:%M")),
+  end: trip_event.end.try(:strftime,("%Y-%m-%e %H:%M"))
 }
 # .to_datetime.strftime("%Y-%m-%e %H:%M")

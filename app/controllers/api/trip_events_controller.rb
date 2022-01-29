@@ -39,4 +39,9 @@ class Api::TripEventsController < ApplicationController
     @event = TripEvent.find(params[:id])
     render 'show.json.jb'
   end
+  def destroy
+    trip_event = TripEvent.find(params[:id])
+    trip_event.destroy
+    render json: {message: "Trip Event removed from this trip"}
+  end
 end

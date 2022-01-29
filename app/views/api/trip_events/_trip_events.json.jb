@@ -1,4 +1,5 @@
 {
+  id: trip_event.id,
   place_id: trip_event.place_id,
   name: trip_event.name,
   address: trip_event.address,

@@ -14,4 +14,3 @@
   start: trip_event.start.try(:strftime,("%Y-%m-%e %l:%M %p")),
   end: trip_event.end.try(:strftime,("%Y-%m-%e %l:%M %p"))
 }
-# .to_datetime.strftime("%Y-%m-%e %H:%M")

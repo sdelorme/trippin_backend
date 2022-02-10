@@ -1,7 +1,7 @@
 class Api::TripEventsController < ApplicationController
   before_action :authenticate_user
   def index
-    @events = current_user.trip_events
+    @events = current_user.trip_events.order(start: :asc)
     render 'index.json.jb'
   end
   

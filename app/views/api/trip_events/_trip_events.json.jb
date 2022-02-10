@@ -11,6 +11,6 @@
   google_url: trip_event.google_url,
   lat: trip_event.lat,
   lng: trip_event.lng,
-  start: trip_event.start.try(:strftime,("%Y-%m-%e %l:%M %p")),
-  end: trip_event.end.try(:strftime,("%Y-%m-%e %l:%M %p"))
+  start: trip_event.start.try(:strftime,("%a, %b %d, %Y %n %l:%M %p")),
+  end: trip_event.end.try(:strftime,("%a, %b %d, %Y %n %l:%M %p"))
 }

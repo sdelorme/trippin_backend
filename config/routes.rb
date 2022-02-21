@@ -15,6 +15,5 @@ Rails.application.routes.draw do
     get "/trip_events" => "trip_events#index"
     delete "/trip_events/:id" => "trip_events#destroy"
     get "/trip_events/:id" => "trip_events#show"
-    # post "/trips/new" => "trips#create"
   end
 end

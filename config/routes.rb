@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     get "/trip_events" => "trip_events#index"
     delete "/trip_events/:id" => "trip_events#destroy"
     get "/trip_events/:id" => "trip_events#show"
+    get "/saved_trips" => "saved_trips#index"
   end
 end

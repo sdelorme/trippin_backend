@@ -13,4 +13,9 @@ class Api::SavedTripsController < ApplicationController
       render json: { errors: @saved_trip.errors.full_messages }, status: :bad_request
     end
   end
+
+  def index
+    @saved_trips = current_user.saved_trips
+    render 'index.json.jb'
+  end
 end

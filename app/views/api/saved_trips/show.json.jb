@@ -1,0 +1,5 @@
+{
+  id: @saved_trip.id,
+  trip_name: @saved_trip.trip_name,
+  trip_events: @saved_trip.trip_events
+}

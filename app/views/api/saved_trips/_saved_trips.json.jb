@@ -1,15 +1,5 @@
 {
   id: saved_trip.id,
-  # place_id: saved_trip.place_id,
-  # name: saved_trip.name,
-  # address: saved_trip.address,
-  # phone_number: saved_trip.phone_number,
-  # hours: saved_trip.hours,
-  # rating: saved_trip.rating,
-  # user_ratings_total: saved_trip.user_ratings_total,
-  # website: saved_trip.website,
-  # google_url: saved_trip.google_url,
-  # lat: saved_trip.lat,
-  # lng: saved_trip.lng,
-  trip_name: saved_trip.trip_name
+  trip_name: saved_trip.trip_name,
+  trip_events: saved_trip.trip_events
 }

@@ -5,7 +5,7 @@ class Api::SavedTripsController < ApplicationController
     @saved_trip = SavedTrip.new(
       user_id: params[:user_id].to_i,
       trip_name: params[:trip_name],
-      trip_events: params[:trip_events].as_json
+      trip_events: params[:trip_events]
       # trip_events: params[:trip_events].permit([:place_id],[:name],[:address], [:rating], [:website], [:google_url], [:phone_number])
       # trip_events: params.permit(trip_events:[:website, :name, :address, :phone_number, :hours, :rating, :google_url, :place_id])
     )

@@ -1,5 +1,19 @@
 {
   id: @saved_trip.id,
   trip_name: @saved_trip.trip_name,
-  trip_events: @saved_trip.trip_events
+  # trip_events: @saved_trip.trip_events
+  trip_events: @saved_trip.trip_events.map do |event|
+    {
+      id: event["id"],
+      place_id: event["place_id"],
+      name: event["name"],
+      address: event["address"],
+      phone_number: event["phone_number"],
+      hours: event["hours"],
+      rating: event["rating"],
+      website: event["website"],
+      google_url: event["google_url"],
+      photo_reference: event["photo_reference"]
+    }
+  end
 }

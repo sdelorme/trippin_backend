@@ -9,6 +9,7 @@
   user_ratings_total: trip_event.user_ratings_total,
   website: trip_event.website,
   google_url: trip_event.google_url,
+  photo_reference: trip_event.photo_reference,
   lat: trip_event.lat,
   lng: trip_event.lng,
   start: trip_event.start.try(:strftime,("%a, %b %d, %Y %n %l:%M %p")),

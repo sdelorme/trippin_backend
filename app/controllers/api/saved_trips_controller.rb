@@ -6,15 +6,13 @@ class Api::SavedTripsController < ApplicationController
       user_id: params[:user_id].to_i,
       trip_name: params[:trip_name],
       trip_events: params[:trip_events]
-      # trip_events: params[:trip_events].permit([:place_id],[:name],[:address], [:rating], [:website], [:google_url], [:phone_number])
-      # trip_events: params.permit(trip_events:[:website, :name, :address, :phone_number, :hours, :rating, :google_url, :place_id])
     )
-    @saved_trip.save
     if @saved_trip.save
       render json: { message: "Trip saved successfully" }, status: :created
     else
       render json: { errors: @saved_trip.errors.full_messages }, status: :bad_request
     end
+    # @saved_trip.save
   end
 
   def index

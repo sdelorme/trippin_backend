@@ -1,0 +1,13 @@
+# @saved_trip.map do |event|
+#   {
+#     place_id: event["place_id"],
+#     name: event["name"],
+#     address: event["address"],
+#     phone_number: event["phone_number"],
+#     hours: event["hours"],
+#     rating: event["rating"],
+#     website: event["website"],
+#     google_url: event["google_url"],
+#     photo_reference: event["photo_reference"]
+#   }
+# end

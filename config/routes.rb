@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get "/trip_events/:id" => "trip_events#show"
     get "/saved_trips" => "saved_trips#index"
     get "/saved_trips/:id" => "saved_trips#show"
-    # get "/chicago" => "saved_trips#chicago"
+    get "/chicago" => "preset_trips#chicago"
     post "/saved_trips/new" => "saved_trips#create"
     delete "/saved_trips/:id" => "saved_trip#destroy"
   end

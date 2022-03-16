@@ -13,6 +13,11 @@ class Api::PresetTripsController < ApplicationController
     @preset_trip = PresetTrip.find_by(trip_name: 'Ann Arbor')
     render 'show.json.jb'
   end
+  
+  def boston
+    @preset_trip = PresetTrip.find_by(trip_name: 'Boston')
+    render 'show.json.jb'
+  end
 
   def destroy
     preset_trip = PresetTrip.find(params[:id])

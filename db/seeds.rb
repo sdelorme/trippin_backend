@@ -6,94 +6,75 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-trip = PresetTrip.new(trip_name: "Burlington", trip_events: [
+trip = PresetTrip.new(trip_name: "San Francisco", trip_events: [
   {
-    "place_id": "ChIJnUH3afd6ykwRVx2elbIxH_A",
-    "name": "The Vermont Pub & Brewery",
-    "address": "144 College St, Burlington, VT 05401, USA",
-    "phone_number": "(802) 865-0500",
-    "hours": "[\"Monday: Closed\", \"Tuesday: Closed\", \"Wednesday: 11:30 AM – 9:00 PM\", \"Thursday: 11:30 AM – 9:00 PM\", \"Friday: 11:30 AM – 10:00 PM\", \"Saturday: 11:30 AM – 10:00 PM\", \"Sunday: 11:30 AM – 9:00 PM\"]",
-    "rating": "4.1",
-    "website": "http://www.vermontbrewery.com/",
-    "google_url": "https://maps.google.com/?cid=17302602936464842071",
-    "photo_reference": "Aap_uEDOodRYcACikpWOLxK3j1cLnVovg4A_fbiwK3YWigjwzfHwNGbT6GJpT2fKYf-XOx33ISBcZH9RNxUK2oaY0IxAkMuLEsGWFHPRWkbEX80fnxemcmKNiHoSYOwxJAYyrm8xGiAnaph5erm8nXGoY2sqrCbHvYu1mFw6nGXkJ0fKjGOs"
-  },
-  {
-    "place_id": "ChIJR3FiyQN5ykwR9B_F79Lrtc0",
-    "name": "Burlington Beer Company",
-    "address": "180 Flynn Ave, Burlington, VT 05401, USA",
-    "phone_number": "(802) 863-2337",
-    "hours": "[\"Monday: 12:00 – 8:00 PM\", \"Tuesday: 12:00 – 8:00 PM\", \"Wednesday: 12:00 – 8:00 PM\", \"Thursday: 12:00 – 8:00 PM\", \"Friday: 12:00 – 9:00 PM\", \"Saturday: 12:00 – 9:00 PM\", \"Sunday: 12:00 – 7:00 PM\"]",
+    "place_id": "ChIJadPUspGGhYARUOXYYmjVN3Y",
+    "name": "Golden Gate",
+    "address": "Golden Gate, California, USA",
     "rating": "4.7",
-    "website": "http://www.burlingtonbeer.com/",
-    "google_url": "https://maps.google.com/?cid=14823013039758188532",
-    "photo_reference": "Aap_uEA0w6bCUwMhAi3d2DhguV6h2exFDknKIoQYZD331yZ_w0LLvafJv_4PRjf8j9IOJhM3bQy_HzNQvcNtKHoyTCLM2aZUQat4SAsP1b8RtHVh0cpXWETMF9Cv1nZcFq4DEyIKy-Xdi9H0tfYVcXVBsDat7rdY4KyNLobGRvICP-HhJisJ"
+    "google_url": "https://maps.google.com/?q=Golden+Gate&ftid=0x80858691b2d4d369:0x7637d56862d8e550",
+    "photo_reference": "Aap_uECO_E5WL-e5Bv3iUkngUGLEyG_Eo4abgyz7RcwtAVQHWHU3z-KTnpGfQ5W_vram9YQP4jE2B10TVftvDc1wG4lszjc9wtR6z0w9WAofeSMjzukE8WIG-76nzRmeZYdLpYYkYIudRJEYxXrHDMqoQP8sLu0F_KDuiC2SOBH12tDlA_H5"
   },
   {
-    "place_id": "ChIJw9B1n6d7ykwRaGVqVit-s2I",
-    "name": "Switchback Brewing Co.",
-    "address": "160 Flynn Ave, Burlington, VT 05401, USA",
-    "phone_number": "(802) 651-4114",
-    "hours": "[\"Monday: 12:00 – 7:00 PM\", \"Tuesday: 12:00 – 7:00 PM\", \"Wednesday: 12:00 – 7:00 PM\", \"Thursday: 12:00 – 7:00 PM\", \"Friday: 12:00 – 8:00 PM\", \"Saturday: 12:00 – 8:00 PM\", \"Sunday: 12:00 – 6:00 PM\"]",
-    "rating": "4.7",
-    "website": "http://switchbackvt.com/",
-    "google_url": "https://maps.google.com/?cid=7112166961146652008",
-    "photo_reference": "Aap_uEA_DXZdUGH6-JmkBlKUKSoEtas0ge8oXHA8L-hMWA1T1zE21eyDaerWrDjaBSA-sIMKTL3iv1MSySJyS-NvpnRnzvtDDkGYzF3rB8DvG9stmnd5LlsTbeQSSmTxUpKhQCboLzLGL1Bqp4ZY8efmO9OPpqWYLV2AN-BhfrECQNO-awN2"
-  },
-  {
-    "place_id": "ChIJtegI1ah7ykwRO__e8etzz_M",
-    "name": "Zero Gravity Brewery",
-    "address": "716 Pine St, Burlington, VT 05401, USA",
-    "phone_number": "(802) 497-0054",
-    "hours": "[\"Monday: 8:00 AM – 9:00 PM\", \"Tuesday: 8:00 AM – 9:00 PM\", \"Wednesday: 8:00 AM – 9:00 PM\", \"Thursday: 8:00 AM – 9:00 PM\", \"Friday: 8:00 AM – 9:00 PM\", \"Saturday: 8:00 AM – 9:00 PM\", \"Sunday: 8:00 AM – 9:00 PM\"]",
-    "rating": "4.6",
-    "website": "http://www.zerogravitybeer.com/",
-    "google_url": "https://maps.google.com/?cid=17568388128608026427",
-    "photo_reference": "Aap_uEDVbNd3vyTC69zp9n9aBEfMOQ-a_amPCD8SdcFX-pFElA9XtG3vSbR-nSL5gDCN55YphMkcVjM9fLG3e6swsj5nIHMkc2ZAjP-MSHxMkh0nLgy5TuoXkpy6Etu0WUZzTy7R5VIiDNX8xjv8LTWP_xrl5LgrP7UEY7W_DfVbvdT_uUfv"
-  },
-  {
-    "place_id": "ChIJQx7g2Kh7ykwRKjba1exV4-w",
-    "name": "Queen City Brewery",
-    "address": "703 Pine St, Burlington, VT 05401, USA",
-    "phone_number": "(802) 540-0280",
-    "hours": "[\"Monday: 1:00 – 8:00 PM\", \"Tuesday: 1:00 – 8:00 PM\", \"Wednesday: 1:00 – 8:00 PM\", \"Thursday: 1:00 – 8:00 PM\", \"Friday: 12:00 – 9:00 PM\", \"Saturday: 12:00 – 9:00 PM\", \"Sunday: 1:00 – 8:00 PM\"]",
-    "rating": "4.7",
-    "website": "http://www.queencitybrewery.com/",
-    "google_url": "https://maps.google.com/?cid=17069581488352802346",
-    "photo_reference": "Aap_uEAWQtzDduw1-0OnfCuOb8sIIXHW86bvZUVfddMAw274hrhlh0NunwuQTCRQTuo54_ksCMKx9sMUL_eorKsQwvxh1yA89e44nN96FzKE7STpS7qF_eyIgt04LyEIKEd-t8sJTobINzbn4R4GlUO1FVY9coJY67sfYVdLxw2zukWe5Mmk"
-  },
-  {
-    "place_id": "ChIJkRbCN_B6ykwRlO8hIOXby-E",
-    "name": "Foam Brewers - Burlington",
-    "address": "112 Lake St, Burlington, VT 05401, USA",
-    "phone_number": "(802) 399-2511",
-    "hours": "[\"Monday: 12:00 – 9:00 PM\", \"Tuesday: 12:00 – 9:00 PM\", \"Wednesday: 12:00 – 9:00 PM\", \"Thursday: 12:00 – 9:00 PM\", \"Friday: 12:00 – 11:00 PM\", \"Saturday: 12:00 – 11:00 PM\", \"Sunday: 12:00 – 9:00 PM\"]",
-    "rating": "4.7",
-    "website": "http://www.foambrewers.com/",
-    "google_url": "https://maps.google.com/?cid=16270339855939137428",
-    "photo_reference": "Aap_uEDodI4W7HhF9XWUJ75KO5NpVbpHHywZlFsgFN7_orLS4j7CbwRRi3hTy9a5LZcn4LlU9TRCb-wgMN00sl3x3wEa57ogR0jSHQG6tSPJzICUOy4J6c1Uc9Mh5Yb60Lz3YjwkWyWSLlsFqicil-j1VguoNIM4lGwyg4p2O7xM3_ZhkDnF"
-  },
-  {
-    "place_id": "ChIJLd42_WR6ykwRUSVdzMF3Nfg",
-    "name": "Four Quarters Brewing",
-    "address": "70 Main St, Winooski, VT 05404, USA",
-    "phone_number": "(802) 391-9120",
-    "hours": "[\"Monday: Closed\", \"Tuesday: 12:00 – 9:00 PM\", \"Wednesday: 12:00 – 9:00 PM\", \"Thursday: 12:00 – 9:00 PM\", \"Friday: 12:00 – 9:00 PM\", \"Saturday: 12:00 – 9:00 PM\", \"Sunday: 11:00 AM – 8:00 PM\"]",
-    "rating": "4.7",
-    "website": "http://www.4qbc.com/",
-    "google_url": "https://maps.google.com/?cid=17885333169412842833",
-    "photo_reference": "Aap_uEA7h3g9VzFr9S-SoqFP2opySf26GJclbWYESFCfxHHQUME-JWPgVJsqP8oNeKPFY3gLRKlbPWPjpB2TC54F02Cxd2jKTtLG64H_MCd6YDjPpl_8pZMNiD358NRetlT4dTZqTl_MVf9hwmGJzwUsV8A9ii-6YpND25my67OYnPrlYbYb"
-  },
-  {
-    "place_id": "ChIJG6qpyOR9ykwRQHTWp8n5i6w",
-    "name": "Fiddlehead Brewing Company",
-    "address": "6305 Shelburne Rd, Shelburne, VT 05482, USA",
-    "phone_number": "(802) 399-2994",
-    "hours": "[\"Monday: Closed\", \"Tuesday: Closed\", \"Wednesday: 12:00 – 8:00 PM\", \"Thursday: 12:00 – 8:00 PM\", \"Friday: 12:00 – 9:00 PM\", \"Saturday: 12:00 – 9:00 PM\", \"Sunday: 12:00 – 8:00 PM\"]",
+    "place_id": "ChIJAQBA12OAhYARYl66PJyJHV8",
+    "name": "Alcatraz Island Tours",
+    "address": "101 California St, San Francisco, CA 94111, USA",
+    "phone_number": "(800) 210-3008",
     "rating": "4.5",
-    "website": "http://www.fiddleheadbrewing.com/",
-    "google_url": "https://maps.google.com/?cid=12433305840785978432",
-    "photo_reference": "Aap_uEAmN1bDmojdvPmiQ2fUW7MLw5yb6NOsvJ9FdTOhlugHBQ1UiaD7HbrvCQHMOb5CX1mA51QmKgaghovjXL85dqfUemWLyy_uJSbEEAxqboCK3MQ1haui0wqiV192b3bZa9lV3106Htn3CgBwJY9Y2viox8AQPvNAlyyEbtgXRm8jjL-7"
+    "website": "http://www.sanfranciscotoursf.com/about-us.html",
+    "google_url": "https://maps.google.com/?cid=6853785512054513250",
+    "photo_reference": "Aap_uEBnq9UbZ-PUmiohz_D7CO4_aIAlMa1QrSAkXSxGCzL0mNPWj_WXLLGl0u4X0kIrI4LfxIU0XvyjIh9kX5q4d9XC_RGpP9DmV_sfTwSpdOWJy8zxpSMnniYgkCxbq4pj8pjFmyWCdfBNra0loXY7woMriSf7QcrGGT3-8CoknhC7BmkQ"
+  },
+  {
+    "place_id": "ChIJoWFPbsx_j4AR3PsD4qnZfmU",
+    "name": "Panoramic Views at Twin Peaks",
+    "address": "501 Twin Peaks Blvd, San Francisco, CA 94114, USA",
+    "rating": "4.8",
+    "website": "https://www.shltrip.com/San_Francisco_Bay_Spectacular_Views.html",
+    "google_url": "https://maps.google.com/?cid=7313522168560876508",
+    "photo_reference": "Aap_uEC1ZYUqBcH9X-5m7vdgCh0xUQbWLLJenjIfSnJ-dDfExG_Hj15bPnqht5LpA3Bw8T8YiKwqnhEe3u16YoL0cupdoFI0BCTmo16c7okyCXmivzESNX_bt3SUom45ZhyOCSo5XJ6UMQtyy-VwJutANyUPS8oyD2knKQcBDHM7BB3dF84U"
+  },
+  {
+    "place_id": "ChIJO18LDZORhYARwgBBBpotZW4",
+    "name": "Muir Woods",
+    "address": "1 Muir Woods Rd, Mill Valley, CA 94941, USA",
+    "phone_number": "(415) 561-2850",
+    "hours": "[\"Monday: 8:00 AM – 7:00 PM\", \"Tuesday: 8:00 AM – 7:00 PM\", \"Wednesday: 8:00 AM – 7:00 PM\", \"Thursday: 8:00 AM – 7:00 PM\", \"Friday: 8:00 AM – 7:00 PM\", \"Saturday: 8:00 AM – 7:00 PM\", \"Sunday: 8:00 AM – 7:00 PM\"]",
+    "rating": "4.9",
+    "website": "https://www.nps.gov/muwo/index.htm",
+    "google_url": "https://maps.google.com/?cid=7954814456372986050",
+    "photo_reference": "Aap_uEC7P667NQPbrwtP5ui5eJJmuw8C39EGF_H9f3kwA5RjjBtpTVNW9feCS7d2SgngERsZddvvptMamWO6QZ1q867j1b38oGuoRLGh2AIIYURrVkoRNHYB_bXGD05V-EsrXS1DKeSQPSlsrkJitfQnTJ5tKz-uuL2XHOvteHyPhTfl1mC8"
+  },
+  {
+    "place_id": "ChIJ5XSspPF_j4ARuI5plZ5X93Q",
+    "name": "Good Good Culture Club",
+    "address": "3560 18th St, San Francisco, CA 94110, USA",
+    "hours": "[\"Monday: Closed\", \"Tuesday: 5:00 – 9:00 PM\", \"Wednesday: 5:00 – 9:00 PM\", \"Thursday: 5:00 – 9:00 PM\", \"Friday: 5:00 – 9:00 PM\", \"Saturday: 5:00 – 9:00 PM\", \"Sunday: Closed\"]",
+    "rating": "4.5",
+    "website": "http://ggccsf.com/",
+    "google_url": "https://maps.google.com/?cid=8428301566270344888",
+    "photo_reference": "Aap_uEA-sicVinIfC46nsXvOEQZ36w6liszBtrYk6MiZcs92lvX6h62PNbpOoOZC-3BS1LouMYCebo16Uj-h_z3Cije8y1MvodtAf2z44Iwt7GYg1-6IW3ZJa_blBrEnJdX9c5rqiiT-Z1WcBIHOSnxB6QXF6c4vXJIyc5RCuJgY9b8449QW"
+  },
+  {
+    "place_id": "ChIJNc0_Icl_j4ARZEAOdlIS9-c",
+    "name": "Chuck’s Takeaway",
+    "address": "3332 18th St, San Francisco, CA 94110, USA",
+    "hours": "[\"Monday: 11:00 AM – 3:00 PM\", \"Tuesday: 11:00 AM – 3:00 PM\", \"Wednesday: 11:00 AM – 3:00 PM\", \"Thursday: 11:00 AM – 3:00 PM\", \"Friday: 11:00 AM – 3:00 PM\", \"Saturday: Closed\", \"Sunday: Closed\"]",
+    "rating": "4.3",
+    "website": "https://www.chuckstakeaway.com/",
+    "google_url": "https://maps.google.com/?cid=16714848687386148964",
+    "photo_reference": "Aap_uEAsvA5UPsSgeFzBw1DfJahllumYAwO0YCZ-8bu-AH5FJ1obj5OO-Q4fkJwAS4iV6VBSMdwSB5OJTu9ZTMn_42SdG5oVqVepWabMsZWTd5ghuXpJxQY-iG46QeTjvFC-8EUBgnogtLg8vDfEqFgN7WSXcmUZhR6eXwPe9-FecTRBtopW"
+  },
+  {
+    "place_id": "ChIJedb3quuAhYAR2Wi98Ex7WLc",
+    "name": "Sorella",
+    "address": "1760 Polk St, San Francisco, CA 94109, USA",
+    "phone_number": "(415) 359-1212",
+    "hours": "[\"Monday: Closed\", \"Tuesday: Closed\", \"Wednesday: 5:30 – 10:00 PM\", \"Thursday: 5:30 – 10:00 PM\", \"Friday: 5:30 – 10:00 PM\", \"Saturday: 5:30 – 10:00 PM\", \"Sunday: 5:30 – 10:00 PM\"]",
+    "rating": "4.4",
+    "website": "http://www.sorellasf.com/",
+    "google_url": "https://maps.google.com/?cid=13211445077278025945",
+    "photo_reference": "Aap_uEA37FZF82mJ4ctAnRnjivoYjpsWPdv7oC_idSOpCyyWrfYthSVlJw9ImeiZeodFAYgNMXuF02X9afRDvwK5R0SjYqIxCbPiydQBqrbBf8f34-YMJqlndHA8gZy2sIj_U_g7c7G4beGXByw02vbMw3oqeVOWZzJB50IMRoh0DnmRTtid"
   }
 ]
 )

@@ -6,7 +6,7 @@
   lng: place["geometry"]["location"]["lng"],
   rating: place["rating"],
   user_ratings_total: place["user_ratings_total"],
-  photos: place["photos"],
+  photo_reference: place.dig("photos",0,"photo_reference"),
   address: place["vicinity"],
   next_page_token: @next_page_token
 }

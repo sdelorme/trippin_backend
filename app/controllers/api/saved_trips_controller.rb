@@ -1,6 +1,6 @@
 class Api::SavedTripsController < ApplicationController
   # before_action :authenticate_user
-  require 'json'
+  # require 'json'
   def create
     @saved_trip = SavedTrip.new(
       user_id: params[:user_id].to_i,
@@ -22,6 +22,11 @@ class Api::SavedTripsController < ApplicationController
   def show
     @saved_trip = SavedTrip.find(params[:id])
     render 'show.json.jb'
+  end
+  def update
+    @saved_trip = SavedTrip.find(params[:id]),
+    @saved_trip.trip_name = params[:trip_name] || @saved_trip.trip_name,
+    @saved_trip.trip_events = params[:trip_events]
   end
   def destroy
     saved_trip = SavedTrip.find(params[:id])

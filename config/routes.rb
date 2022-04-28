@@ -11,10 +11,11 @@ Rails.application.routes.draw do
     # get "/places/address" => "places#address_to_lat_lng"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
-    #trip events
+    #current trip events
     get "/trip_events" => "trip_events#index"
     post "/trip_events/new" => "trip_events#create"
     get "/trip_events/:id" => "trip_events#show"
+    patch "/trip_events/:id" => "trip_events#update"
     delete "/trip_events/:id" => "trip_events#destroy"
     #saved trips
     get "/saved_trips" => "saved_trips#index"

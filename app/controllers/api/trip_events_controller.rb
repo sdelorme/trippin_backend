@@ -38,6 +38,26 @@ class Api::TripEventsController < ApplicationController
     @event = TripEvent.find(params[:id])
     render 'show.json.jb'
   end
+
+  #update action used for updating the time that event is happening on My Current Event Trips. Intended to keep everything else the same so that user can just update the start and end time of trip event (making an iternary)
+  def update
+    @event = TripEvent.find(params[:id])
+    @event.place_id = @event.place_id
+    @event.name = @event.name
+    @event.address = @event.address
+    @event.phone_number = @event.phone_number
+    @event.hours = @event.hours
+    @event.rating = @event.rating
+    @event.user_ratings_total = @event.user_ratings_total
+    @event.website = @event.website
+    @event.google_url = @event.google_url
+    @event.lat = @event.lat
+    @event.lng = @event.lng
+    @event.photo_reference = @event.photo_reference
+    @event.start = params[:start] ||@event.start
+    @event.end = params[:end] || @event.end
+
+  end
   def destroy
     trip_event = TripEvent.find(params[:id])
     trip_event.destroy

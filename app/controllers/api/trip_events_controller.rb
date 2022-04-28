@@ -56,7 +56,8 @@ class Api::TripEventsController < ApplicationController
     @event.photo_reference = @event.photo_reference
     @event.start = params[:start] ||@event.start
     @event.end = params[:end] || @event.end
-
+    @event.save
+    render json: {message: "Trip Event Updated"}
   end
   def destroy
     trip_event = TripEvent.find(params[:id])

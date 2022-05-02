@@ -1,5 +1,5 @@
 class Api::SavedTripsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
   # require 'json'
   def create
     @saved_trip = SavedTrip.new(

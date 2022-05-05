@@ -54,7 +54,7 @@ class Api::TripEventsController < ApplicationController
     @event.lat = @event.lat
     @event.lng = @event.lng
     @event.photo_reference = @event.photo_reference
-    @event.start = params[:start] ||@event.start
+    @event.start = params[:start] || @event.start
     @event.end = params[:end] || @event.end
     @event.save
     render json: {message: "Trip Event Updated"}

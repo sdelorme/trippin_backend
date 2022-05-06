@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
     #current trip events
     get "/trip_events" => "trip_events#index"
+    delete "/trip_events" => "trip_events#destroy_all"
     post "/trip_events/new" => "trip_events#create"
     get "/trip_events/:id" => "trip_events#show"
     patch "/trip_events/:id" => "trip_events#update"

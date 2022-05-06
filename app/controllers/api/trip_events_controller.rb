@@ -64,4 +64,9 @@ class Api::TripEventsController < ApplicationController
     trip_event.destroy
     render json: {message: "Trip Event removed from this trip"}
   end
+  def destroy_all
+    @events = current_user.trip_events
+    @events.destroy_all
+    render json: {message: "All trip events removed from this trip"}
+  end
 end

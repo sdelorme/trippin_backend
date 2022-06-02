@@ -23,11 +23,32 @@ class Api::SavedTripsController < ApplicationController
     @saved_trip = SavedTrip.find(params[:id])
     render 'show.json.jb'
   end
-  def update
-    @saved_trip = SavedTrip.find(params[:id]),
-    @saved_trip.trip_name = params[:trip_name] || @saved_trip.trip_name,
-    @saved_trip.trip_events = params[:trip_events]
-  end
+  # def update    
+  #   @saved_trip = SavedTrip.find(params[:id]),
+  #   @saved_trip.trip_name = params[:trip_name] || @saved_trip.trip_name,
+  #   @saved_trip.trip_events = params[:trip_events] || @saved_trip.trip_events
+
+  #   trip_event = TripEvent.new(
+  #     place_id: params[:place_id],
+  #     name: params[:name],
+  #     address: params[:address],
+  #     phone_number: params[:phone_number],
+  #     hours: params[:hours],
+  #     rating: params[:rating],
+  #     user_ratings_total: params[:user_ratings_total],
+  #     website: params[:website],
+  #     google_url: params[:google_url],
+  #     lat: params[:lat],
+  #     lng: params[:lng],
+  #     photo_reference: params[:photo_reference],
+  #     start: params[:start].to_datetime,
+  #     end: params[:end].to_datetime
+  #   )
+  #   trip_event.save
+
+  #   @saved_trip.trip_events.push(trip_event)
+  #   @saved_trip.save
+  # end
   def destroy
     saved_trip = SavedTrip.find(params[:id])
     saved_trip.destroy

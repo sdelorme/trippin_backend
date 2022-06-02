@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     get "/saved_trips" => "saved_trips#index"
     post "/saved_trips/new" => "saved_trips#create"
     get "/saved_trips/:id" => "saved_trips#show"
+    patch "/saved_trips/:id" => "saved_trips#update"
     delete "/saved_trips/:id" => "saved_trips#destroy"
     #preset trips
     get "/chicago" => "preset_trips#chicago"

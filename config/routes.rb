@@ -32,4 +32,5 @@ Rails.application.routes.draw do
     get "/burlington" => "preset_trips#burlington"
     get "/san_francisco" => "preset_trips#san_francisco"
   end
+  get '*path' => "application#index"
 end

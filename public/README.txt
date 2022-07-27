@@ -1,5 +1,7 @@
 # Trippin Backend
 
+- Intended as a web app, view as website for optimal experience.
+
 ## Table of Contents
 
 - [Overview](#overview)

@@ -2,7 +2,7 @@
 
 - Intended as a web app, view as website for optimal experience. For full experience, log in with the following credentials:
 
-username: guest
+username: guest  
 password: password
 
 ## Table of Contents

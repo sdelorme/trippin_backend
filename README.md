@@ -1,6 +1,9 @@
 # Trippin Backend
 
-- Intended as a web app, view as website for optimal experience.
+- Intended as a web app, view as website for optimal experience. For full experience, log in with the following credentials:
+
+username: guest
+password: password
 
 ## Table of Contents
 
